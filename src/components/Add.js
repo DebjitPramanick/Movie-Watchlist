@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {ResultCard} from "./ResultCard"
 
 const base = "https://api.themoviedb.org/3/search/movie"
 
@@ -34,9 +35,11 @@ export const Add = () => {
 
                     {results.length > 0 && (
                         <ul className="results">
-                            {results.map((movie)=>{
-                                return <li>{movie.title}</li>
-                            })}
+                            {results.map((movie)=>(
+                                <li key={movie.id}>
+                                    <ResultCard movie={movie}/>
+                                </li> 
+                            ))}
                         </ul>
                     )}
                 </div>
