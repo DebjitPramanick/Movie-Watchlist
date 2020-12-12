@@ -13,7 +13,14 @@ export const Add = () => {
 
         fetch(`${base}?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`)
         .then( (resp)=>resp.json() )
-        .then( (data)=>console.log(data) );
+        .then( (data)=>{
+            if(!data.errors){
+                setResults(data.results);
+            }
+            else{
+                setResults([]);
+            }
+        });
     }
 
     return (
@@ -24,6 +31,14 @@ export const Add = () => {
                         <input type="text" placeholder="Search for a movie..." 
                         value={query} onChange={Search}/>
                     </div>
+
+                    {results.length > 0 && (
+                        <ul className="results">
+                            {results.map((movie)=>{
+                                return <li>{movie.title}</li>
+                            })}
+                        </ul>
+                    )}
                 </div>
             </div>
         </div>
