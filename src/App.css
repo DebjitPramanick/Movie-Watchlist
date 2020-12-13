@@ -147,6 +147,8 @@ header .nav-links li:last-child {
 .result-card {
   display: flex;
   margin-bottom: 20px;
+  background-color: #dadada;
+  padding: 16px;
 }
 
 .result-card .poster-wrapper img,
@@ -168,7 +170,7 @@ header .nav-links li:last-child {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: var(--black);
   font-weight: 600;
   margin: 0;
 }
@@ -176,11 +178,13 @@ header .nav-links li:last-child {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color: var(--secondary);
   margin: 0;
 }
 
 .result-card .controls button {
+  padding: 12px;
+  font-size: 12px;
   margin-right: 10px;
 }
 
@@ -207,7 +211,7 @@ header .nav-links li:last-child {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: var(--secondary);
   margin: 0;
 }
 
