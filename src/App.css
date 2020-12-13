@@ -126,12 +126,12 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input {
   width: 100%;
-  background-color: var(--primary);
-  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  padding: 14px;
   border-radius: 5px;
   border: none;
-  color: var(--white);
-  font-size: 1.25rem;
+  color: var(--black);
+  font-size: 1.1rem;
 }
 
 .results {
