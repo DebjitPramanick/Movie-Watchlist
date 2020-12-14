@@ -3,11 +3,15 @@ import {GlobalContext} from "../context/GlobalState"
 import Watchlist from './Watchlist';
 
 export const ResultCard = ({movie}) => {
-    const {addMovie,watchlist}= useContext(GlobalContext);
+    const {addMovie,watchlist,watched}= useContext(GlobalContext);
 
     let storedMovie = watchlist.find( o => o.id === movie.id);
+    let storedMovieWatched = watched.find( o => o.id === movie.id);
 
-    const watchlistdisabled = storedMovie ? true : false;
+    const watchlistdisabled = 
+    storedMovie ? true : 
+    storedMovieWatched ? true : 
+    false;
 
     return (
         <div className="result-card">
