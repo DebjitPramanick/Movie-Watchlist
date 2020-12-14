@@ -84,6 +84,11 @@ header .inner-content {
   padding: 10px 0;
 }
 
+@media(max-width: 760px){
+  header .inner-content{flex-direction: column !important;}
+  .brand{margin-bottom: 30px;}
+}
+
 header a {
   color: var(--white);
   font-size: 1.25rem;
@@ -271,6 +276,16 @@ header .nav-links li:last-child {
 
 .movie-card:hover .inner-card-controls {
   opacity: 1;
+}
+
+
+@media(max-width: 760px){
+  .movie-card .inner-card-controls{opacity: 1;}
+  .movie-card .inner-card-controls{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1px;
+  }
 }
 
 .ctrl-btn {
